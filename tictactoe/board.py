@@ -34,7 +34,7 @@ class Board:
         self.p1_score: int = 0
         self.p2_score: int = 0
 
-        self.squares: dict[[int, int], Square] = self.get_squares()
+        self.squares: dict[(int, int), Square] = self.get_squares()
         self.table: list[Symbol] = self.get_table()
         self.win_conditions: list[list[Square]] = self.get_win_conditions()
 
@@ -51,7 +51,7 @@ class Board:
         diagonals = self.get_diagonals()
         return rows + cols + diagonals
 
-    def get_squares(self) -> dict[[int, int], Square]:
+    def get_squares(self) -> dict[(int, int), Square]:
         """Create a dictionary containing all squares
 
         Returns:
